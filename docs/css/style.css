@@ -28,6 +28,7 @@ header div.logo a {
   align-items: center;
 }
 header div.logo img {
+  pointer-events: none;
   margin-right: 5px;
   width: 40px;
   height: 40px;
@@ -43,26 +44,47 @@ header nav.nav-bar ul li {
 }
 section.presentation {
   box-sizing: border-box;
-  padding: 100px 60px;
+  padding: 100px 0;
 }
 section.presentation div.container-presentation {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap-reverse;
 }
-section.presentation div.container-presentation a.btn {
+section.presentation div.container-presentation div.text-presentation {
+  margin: 20px;
+  max-width: 550px;
+  flex: 1 1 100%;
+}
+section.presentation div.container-presentation div.text-presentation a.btn {
   font-size: 22px;
   width: 200px;
 }
-section.presentation div.container-presentation h2 {
+section.presentation div.container-presentation div.text-presentation h2 {
   font-size: 42px;
   line-height: 50px;
   margin-bottom: 20px;
-  width: 552px;
+}
+section.presentation div.container-presentation figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 section.presentation div.container-presentation img {
+  pointer-events: none;
+  animation: move-chip 1.5s ease alternate infinite;
   width: 350px;
   height: 350px;
+}
+section.presentation div.container-presentation i.shadow {
+  display: block;
+  box-shadow: 0 35px 6px -10px rgba(0,0,0,.6);
+  border-radius: 50%;
+  animation: change-shadow 1.5s ease alternate infinite;
+  margin-bottom: 20px;
+  width: 70%;
+  height: 40px;
 }
 section.team {
   background: var(--primary-color);
@@ -84,7 +106,8 @@ section.team div.members-group {
 section.team div.members-group div.member {
   display: flex;
   align-items: center;
-  margin: 25px 50px;
+  margin: 25px;
+  width: 340px;
 }
 section.team div.members-group div.member img {
   background: #fff;
@@ -113,12 +136,14 @@ section.characters {
 section.characters div.resume-characters {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 section.characters div.resume-characters div.character {
   margin: 0 50px;
   width: 200px;
 }
 section.characters div.resume-characters div.character img {
+  pointer-events: none;
   width: 200;
   height: 200px;
 }
@@ -138,13 +163,14 @@ section.characters div.resume-characters div.character span.character-resume {
 section.progress-robot {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   background: #fff;
   padding: 80px 60px;
 }
 section.progress-robot div.carousel {
-  margin-right: 80px;
-  flex: 0 0 580px;
+  max-width: 550px;
+  flex: 1 1 50%;
 }
 section.progress-robot div.carousel img.large-image{
   background-color: lightcyan;
@@ -180,12 +206,16 @@ section.progress-robot div.carousel div.another-images ul li {
 }
 section.progress-robot div.carousel div.another-images ul li img {
   background-color: lightgrey;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+}
+section.progress-robot div.information-image {
+  margin: 40px;
+  flex: 1 1 40%;
 }
 section.progress-robot div.information-image p {
   color: #505050;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 400;
   text-align: center;
 }
@@ -193,10 +223,13 @@ section.robocup {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: var(--secundary-color);
+  flex-wrap: wrap-reverse;
+  background: var(--tertiary-color);
   padding: 80px 0;
 }
 section.robocup img {
+  pointer-events: none;
+  margin-top: 50px;
   width: 250px;
   height: 250px;
 }
@@ -218,7 +251,7 @@ section.robocup div.information p {
   font-style: italic;
   text-align: right;
   margin: 15px 0;
-  width: 550px;
+  width: 500px;
 }
 section.robocup div.information span {
   margin-bottom: 10px;
@@ -232,10 +265,12 @@ section.contact {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap-reverse;
   background: #fff;
   padding: 80px 0;
 }
 section.contact div.form {
+  margin-top: 50px;
   flex: 0 0 450px;
 }
 section.contact div.form h3 {
@@ -249,7 +284,7 @@ section.contact div.form form > input, section.contact div.form form textarea {
   color: #262626;
   font-family: var(--font);
   font-size: 15px;
-  background: #f0f0f0;
+  background: #f5f5f5;
   border: none;
   outline: none;
   border-radius: 5px;
@@ -260,7 +295,7 @@ section.contact div.form form > input, section.contact div.form form textarea {
   width: 100%;
 }
 ::placeholder  {
-  color: #999999;
+  color: #969696;
   font-style: italic;
 }
 section.contact div.form form textarea {
@@ -302,14 +337,44 @@ section.contact div.information p {
   margin-bottom: 25px;
 }
 section.contact div.information img {
+  pointer-events: none;
   width: 250px;
   height: 250px;
 }
+footer {
+  padding: 10px 0;
+}
+footer div.copyright > span {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+footer div.copyright span.credits {
+  color: #808080;
+  font-weight: 400;
+  font-size: 12px;
+}
+footer div.copyright span.credits span.company {
+  color: rgb(237,20,91)
+}
+@keyframes move-chip {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@keyframes change-shadow {
+  from {
+    transform: scale(1)
+  }
+  to {
+    transform: scale(.9)
+  }
+}
 
 @media screen and (max-width: 600px) {
-  body {
-    /* overflow-x: hidden; */
-  }
   header {
     display: none;
     position: fixed;
@@ -345,14 +410,15 @@ section.contact div.information img {
     padding: 0;
   }
   section.presentation div.container-presentation img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
-  section.presentation div.container-presentation h2 {
-    font-size: 40px;
+  section.presentation div.container-presentation div.text-presentation h2 {
+    font-size: 35px;
+    line-height: 45px;
     text-align: center;
     box-sizing: border-box;
-    margin: 20px 0;
+    margin: 20px 0 40px;
     width: 90%;
   }
   section.presentation div.container-presentation div.text-presentation {
@@ -366,6 +432,7 @@ section.contact div.information img {
     align-items: center;
   }
   section.team h3 {
+    font-size: 35px;
     width: 80%;
   }
   section.team div.members-group {
@@ -373,6 +440,9 @@ section.contact div.information img {
   }
   section.team div.members-group div.member {
     flex-direction: column;
+  }
+  section.team div.members-group div.member img {
+    margin: 0 0 5px;
   }
   section.team div.members-group div.member div.information-member span {
     display: block;
@@ -438,7 +508,7 @@ section.contact div.information img {
     flex: unset;
   }
   section.contact div.form h3 {
-    text-align: center;
+    display: none;
   }
   section.contact div.information {
     width: 80%;
