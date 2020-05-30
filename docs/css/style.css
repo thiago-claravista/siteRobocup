@@ -52,6 +52,9 @@ header label[for=menu-mobile].open-menu {
   width: 40px;
   height: 30px;
 }
+header label[for=menu-mobile].close-menu {
+  display: none;
+}
 header input#menu-mobile:checked ~ .header {
   right: 0;
 }
@@ -449,6 +452,7 @@ footer div.copyright span.credits span.company {
   }
   header div.header label[for=menu-mobile].close-menu {
     position: absolute;
+    display: block;
     background: url('../img/close-button.svg') no-repeat center;
     cursor: pointer;
     top: 30px;
