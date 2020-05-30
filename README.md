@@ -1,2 +1,2 @@
-# siteRobocup
-Site referente ao robô Gudan da Robocup FIAP 2020
+# Robô Gundam
+Site referente ao robô Gundam, participante e lutador da Robocup FIAP 2020.

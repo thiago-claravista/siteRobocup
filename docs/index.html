@@ -9,20 +9,25 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <a href="index.html" class="logo">
-        <figure><img src="img/logo.svg" alt="Logotipo"></figure>
-        <span>Gundam</span>
-      </a>
+    <input type="checkbox" id="menu-mobile">
+    <label for="menu-mobile" class="open-menu"></label>
+    <div class="header">
+      <label for="menu-mobile" class="close-menu"></label>
+      <div class="logo">
+        <a href="index.html" class="logo">
+          <figure><img src="img/logo.svg" alt="Logotipo"></figure>
+          <span>Gundam</span>
+        </a>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#">Equipe</a></li>
+          <li><a href="#">Projeto</a></li>
+          <li><a href="#">Evento</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="#">Equipe</a></li>
-        <li><a href="#">Projeto</a></li>
-        <li><a href="#">Evento</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
   </header>
   <section class="presentation">
     <div class="container-presentation">
@@ -167,6 +172,32 @@
     </div>
   </section>
   <footer>
+    <div class="informations">
+      <div class="social-networks">
+        <span class="title">Redes Sociais</span>
+        <div class="links">
+          <a href="https://facebook.com/" target="_blank" title="Curta-nos no Facebook">
+            <figure><img src="img/icon-facebook.svg" alt="Facebook"></figure>
+          </a>
+          <a href="https://instagram.com/" target="_blank" title="Siga-nos no Instagram">
+            <figure>
+              <img src="img/icon-instagram.svg" alt="Instagram">
+            </figure>
+          </a>
+          <a href="https://youtube.com/" target="_blank" title="Assista-nos no YouTube">
+            <figure>
+              <img src="img/icon-youtube.svg" alt="Youtube">
+            </figure>
+          </a>
+        </div>
+      </div>
+      <div class="organization">
+        <span class="title">Organização</span>
+        <a href="https://www.fiap.com.br/" title="FIAP">
+          <figure><img src="img/logo-fiap.png" alt="FIAP"></figure>
+        </a>
+      </div>
+    </div>
     <div class="copyright">
       <span>&copy; Gundam 2020 - Todos os direitos reservados</span>
       <span class="credits">Desenvolvimento <span class="company">System Crown</span></span>
