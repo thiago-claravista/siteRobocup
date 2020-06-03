@@ -391,6 +391,7 @@ footer div.informations div.social-networks div.links a {
   margin: 0 15px;
 }
 footer div.informations div.social-networks div.links a img {
+  pointer-events: none;
   width: 35px;
   height: 35px;
 }
