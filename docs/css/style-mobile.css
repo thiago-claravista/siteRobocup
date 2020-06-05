@@ -1,0 +1,163 @@
+/* CSS para dispositivos móveis */
+@media screen and (max-width: 600px) {
+  header div.header {
+    position: fixed;
+    background: var(--primary-color);
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: -3px 0 5px rgba(0,0,0,.2);
+    transition: right .3s;
+    padding: 0;
+    z-index: 10;
+    right: -100%;
+    min-width: 300px;
+    width: 50%;
+    height: 100%;
+  }
+  header label[for=menu-mobile].open-menu {
+    display: block;
+  }
+  header div.header label[for=menu-mobile].close-menu {
+    position: absolute;
+    display: block;
+    background: url('../img/close-button.svg') no-repeat center;
+    cursor: pointer;
+    top: 30px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  header div.header nav.nav-bar {
+    margin: 10px 0;
+    width: 100%;
+  }
+  header div.header nav.nav-bar ul li {
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  header div.header nav.nav-bar ul li a {
+    display: block;
+    padding: 15px 0;
+  }
+  section.presentation {
+    padding: 100px 0;
+  }
+  section.presentation div.container-presentation {
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  section.presentation div.container-presentation img {
+    width: 250px;
+    height: 250px;
+  }
+  section.presentation div.container-presentation div.text-presentation h2 {
+    font-size: 35px;
+    line-height: 45px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 20px 0 40px;
+    width: 90%;
+  }
+  section.presentation div.container-presentation div.text-presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.team h3 {
+    font-size: 35px;
+    width: 80%;
+  }
+  section.team div.members-group {
+    flex-direction: column;
+  }
+  section.team div.members-group div.member {
+    flex-direction: column;
+  }
+  section.team div.members-group div.member img {
+    margin: 0 0 5px;
+  }
+  section.team div.members-group div.member div.information-member span {
+    display: block;
+    text-align: center;
+  }
+  section.characters div.resume-characters {
+    align-items: center;
+    flex-direction: column;
+  }
+  section.characters div.resume-characters div.character {
+    margin: 10px 0;
+  }
+  section.progress-robot {
+    padding: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 40px 0;
+  }
+  section.progress-robot div.carousel {
+    margin: 0;
+    flex: 1 1 100%;
+  }
+  section.progress-robot div.carousel div.another-images ul li:nth-child(n+5) {
+    display: none;
+  }
+  section.progress-robot div.information-image p {
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 0 10%;
+    margin: 20px 0;
+  }
+  section.robocup {
+    flex-wrap: wrap-reverse;
+    padding: 50px 20px;
+  }
+  section.robocup img {
+    width: 120px;
+    height: 120px;
+  }
+  section.robocup div.information {
+    width: 60%;
+  }
+  section.robocup div.information h3 {
+    font-style: 20px;
+  }
+  section.robocup div.information p {
+    font-size: 16px;
+    width: auto;
+  }
+  section.robocup div.information div.previous-editions {
+    display: flex;
+    flex-direction: column;
+  }
+  section.robocup div.information div.previous-editions a {
+    margin: 10px 0;
+  }
+  section.contact {
+    flex-direction: column-reverse;
+  }
+  section.contact div.form {
+    margin-top: 50px;
+    width: 80%;
+    flex: unset;
+  }
+  section.contact div.form h3 {
+    display: none;
+  }
+  section.contact div.information {
+    width: 80%;
+    flex: unset;
+  }
+  footer div.informations {
+    flex-direction: column;
+  }
+  footer div.informations > div {
+    margin: 10px 0;
+  }
+}
