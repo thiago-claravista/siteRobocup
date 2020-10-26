@@ -177,7 +177,6 @@ header input#menu-mobile {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 50px;
   background: #fff;
   padding: 40px 0;
 }
@@ -186,6 +185,7 @@ header input#menu-mobile {
   justify-content: center;
   flex-wrap: wrap;
   gap: 100px;
+  margin-bottom: 50px;
 }
 .character {
   border-radius: 3px;
@@ -442,7 +442,6 @@ header input#menu-mobile {
 .contact .form form .radio-buttons {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 .contact .form form .radio-buttons label {
   display: flex;
@@ -450,6 +449,7 @@ header input#menu-mobile {
   gap: 5px;
   color: #505050;
   line-height: 0;
+  margin-right: 15px;
 }
 .contact .form form button {
   font-family: var(--font);

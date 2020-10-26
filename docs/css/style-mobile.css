@@ -94,6 +94,7 @@
   .characters div.resume-characters {
     align-items: center;
     flex-direction: column;
+    gap: 0;
   }
   .about-robot-modal {
     width: 90%;
@@ -141,7 +142,9 @@
   .robocup div.information div.previous-editions {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+  }
+  .robocup div.information div.previous-editions a {
+    margin-bottom: 15px;
   }
 
   .contact .content {
