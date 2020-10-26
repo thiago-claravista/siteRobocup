@@ -3,8 +3,8 @@ export default (links) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       const section = document.querySelector(event.target.hash);
-      window.scrollTo({
-        top: section?.getBoundingClientRect().top,
+      window.scroll({
+        top: section?.offsetTop,
         behavior: 'smooth'
       });
     })
