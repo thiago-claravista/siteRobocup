@@ -20,7 +20,7 @@ const characters = document.querySelectorAll('[data-character]');
 characters.forEach(character => {
   character.addEventListener('click', async ({ target }) => {
     const dataset = target.dataset.character;
-    const text = await (await fetch(`../txt/${dataset}.txt`)).text();
+    const text = await (await fetch(`./txt/${dataset}.txt`)).text();
     const container = modal.querySelector('.content-modal');
     container.innerHTML = '<p>' + text.split('\n').join('<p>');
     modal.classList.add('active');
