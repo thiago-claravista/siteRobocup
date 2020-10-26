@@ -1,25 +1,43 @@
 @charset "UTF-8";
 @font-face {
   font-family: "IBM Plex Sans";
-  src: url('../font/IBMPlexSans-Regular.woff2') format("woff2");
+  src: url("../font/IBMPlexSans-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 @font-face {
   font-family: "IBM Plex Sans";
-  src: url('../font/IBMPlexSans-SemiBold.woff2') format("woff2");
+  src: url("../font/IBMPlexSans-SemiBold.woff2") format("woff2");
   font-weight: 600;
 }
 
 :root {
-  --primary-color: #4BD7C8;
-  --secundary-color: #99E9DF;
-  --tertiary-color: #CCF4EF;
+  --primary-color: #4bd7c8;
+  --secundary-color: #99e9df;
+  --tertiary-color: #ccf4ef;
   --font: "IBM Plex Sans";
 }
+
+::placeholder {
+  color: #969696;
+  font-style: italic;
+}
+
 * {
   margin: 0;
   padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+  height: 3px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -27,5 +45,5 @@ body {
   font-family: var(--font);
   font-weight: 600;
   color: #262626;
-  background: #FAFAFA;
+  background: #fafafa;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/style-mobile.css">
   <title>Robô Gundam - Robocup FIAP 2020</title>
 </head>
+
 <body>
   <header>
     <input type="checkbox" id="menu-mobile">
@@ -22,10 +24,10 @@
       </div>
       <nav class="nav-bar">
         <ul>
-          <li><a href="#team">Equipe</a></li>
-          <li><a href="#project">Projeto</a></li>
-          <li><a href="#event">Evento</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="#team" data-link>Equipe</a></li>
+          <li><a href="#project" data-link>Projeto</a></li>
+          <li><a href="#event" data-link>Evento</a></li>
+          <li><a href="#contact" data-link>Contato</a></li>
         </ul>
       </nav>
     </div>
@@ -34,7 +36,7 @@
     <div class="container-presentation">
       <div class="text-presentation">
         <h2>Ele está chegando! Conheça um dos fortes lutadores da Robocup FIAP</h2>
-        <a href="#project" class="btn">Ver o Projeto</a>
+        <a href="#project" class="btn" data-link>Ver o Projeto</a>
       </div>
       <figure><img src="img/chip.svg" alt="Chip eletrônico"><i class="shadow"></i></figure>
     </div>
@@ -43,35 +45,35 @@
     <h3>Conheça a nossa equipe</h3>
     <div class="members-group">
       <div class="member">
-        <figure><img src="img/user.svg"></figure>
+        <figure><img src="img/team-1.jpeg"></figure>
         <div class="information-member">
           <span class="member-name">Adler Cordeiro</span>
           <span class="member-office">Gestor da System Crown</span>
         </div>
       </div>
       <div class="member">
-        <figure><img src="img/user.svg"></figure>
+        <figure><img src="img/team-5.jpeg"></figure>
         <div class="information-member">
           <span class="member-name">Bruno Bergamasco</span>
           <span class="member-office">Analista da System Crown</span>
         </div>
       </div>
       <div class="member">
-        <figure><img src="img/user.svg"></figure>
+        <figure><img src="img/team-4.jpeg"></figure>
         <div class="information-member">
           <span class="member-name">Giovani Kenji</span>
           <span class="member-office">Designer da System Crown</span>
         </div>
       </div>
       <div class="member">
-        <figure><img src="img/user.svg"></figure>
+        <figure><img src="img/team-2.jpeg"></figure>
         <div class="information-member">
           <span class="member-name">Thiago Alves</span>
           <span class="member-office">Desenvolvedor da System Crown</span>
         </div>
       </div>
       <div class="member">
-        <figure><img src="img/user.svg"></figure>
+        <figure><img src="img/team-3.jpeg"></figure>
         <div class="information-member">
           <span class="member-name">Thiago Pires</span>
           <span class="member-office">Desenvolvedor da System Crown</span>
@@ -81,97 +83,181 @@
   </section>
   <section class="characters" id="project">
     <div class="resume-characters">
-      <div class="character">
+      <div class="character" data-character="speed">
         <figure><img src="img/rocket.svg" alt="Foguete"></figure>
         <span class="character-name">Rápido</span>
         <span class="character-resume">Velocidade e Agilidade são os seus pontos fortes</span>
       </div>
-      <div class="character">
+      <div class="character" data-character="resistance">
         <figure><img src="img/batery.svg" alt="Foguete"></figure>
         <span class="character-name">Resistente</span>
         <span class="character-resume">Projetado para atividade intensa e por várias horas</span>
       </div>
-      <div class="character">
+      <div class="character" data-character="powerful">
         <figure><img src="img/barbed-wire.svg" alt="Foguete"></figure>
         <span class="character-name">Poderoso</span>
         <span class="character-resume">Pronto para o combate com suas armas pontiagudas</span>
       </div>
     </div>
-  </section>
-  <section class="progress-robot">
-    <div class="carousel">
-      <figure><img src="img/logo.svg" alt="Imagem principal" class="large-image"></figure>
-      <div class="another-images">
-        <button class="back"></button>
-        <ul>
-          <li>
-            <figure><img src="img/logo.svg" alt="Miniatura"></figure>
-          </li>
-          <li>
-            <figure><img src="img/logo.svg" alt="Miniatura"></figure>
-          </li>
-          <li>
-            <figure><img src="img/logo.svg" alt="Miniatura"></figure>
-          </li>
-          <li>
-            <figure><img src="img/logo.svg" alt="Miniatura"></figure>
-          </li>
-          <li>
-            <figure><img src="img/logo.svg" alt="Miniatura"></figure>
-          </li>
-          <li>
-            <figure><img src="img/logo.svg" alt="Miniatura"></figure>
-          </li>
-        </ul>
-        <button class="next"></button>
+    <button class="read-more btn" data-character="all">Leia mais</button>
+    <div class="about-robot">
+      <div class="about-robot-modal">
+        <button class="close-modal"></button>
+        <div class="content-modal">
+          <h2>Sobre o Gundam</h2>
+          <p>
+            O Gundam, desenvolvido pela equipe System Crown, foi projetado com a base no formato de trapézio isósceles,
+            utilizando a chapa compensado 3mm, com o objetivo de deixá-lo mais leve e ainda sim resistente. A medida da
+            base maior terá 28 cm, a base menor terá 24 cm, a medida dos lados iguais será de 28,1 cm e a altura do robô
+            em si será de 15 cm.
+          </p>
+          <p>
+            Nos 4 lados do trapézio estão posicionados sensores fim de curso, mais especificamente 2 de cada lado, que
+            serão responsáveis pela ativação da arma, caso o robô encoste no adversário ou na parede da arena. Os
+            sensores
+            estarão conectados ao Arduino uno, através de jumpers, pelos pinos COM e NO de cada um, e ativarão sempre
+            que
+            o circuito for fechado.
+          </p>
+          <p>
+            A Shield L298N é o dispositivo que controla o funcionamento dos motores das rodas e da arma. O Arduino
+            possui
+            as entradas 3, 5, 6 e 9, que se conectam respectivamente as entradas IN1, IN2, IN3 E IN4, da Shield. As
+            entradas 3 e 5 controlam o motor direito das rodas e as entradas 6 e 9 controlam o motor esquerdo das rodas.
+            O
+            Arduino manda um sinal, o que permite um fluxo de corrente elétrica para os terminais dos motores,
+            conseguindo
+            assim regular o sentido da rotação e a velocidade.
+          </p>
+          <p>
+            Um componente extremamente importante é o módulo HC05. Este é um dispositivo Bluetooth que faz a comunicação
+            entre o robô e o programa desenvolvido para o controle dele no smartphone. Ele está posicionado na parede
+            lateral e se conecta com o Arduino através de jumpers para alimentação do dispositivo Bluetooth, que suporta
+            no máximo 5v de tensão de entrada, sendo um enorme risco conectá-lo ao Protoboard, que pode fornecer mais do
+            que isso. E também se ligam, através de jumpers, às entradas Tx (transmissor de informação) e Rx (receptor
+            de
+            informação), para que haja a transmissão dos comandos do smartphone para o robô. Ambos dispositivos possuem
+            essas entradas para trocar dados.
+          </p>
+          <p>
+            Em seguida temos o Arduíno uno que foi posicionado perto do centro da base do robô e ele será o responsável
+            por controlar o robô, o programa desenvolvido é passado para o Arduíno e através de suas entradas PWM, pode
+            se
+            conectar a outros dispositivos como o Shield, o HC05, os sensores e o Protoboard. Sua função é mandar os
+            sinais para os dispositivos que controlam os motores, com os comandos de movimento, além de alimentar o HC05
+            com a tensão de 5v.
+          </p>
+          <p>
+            E por fim, na parte da frente do robô encaixaremos um smartphone que filmará a visão frontal. A imagem será
+            transmitida em uma outra tela para que o controlador do robô possa ver o adversário.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="information-image">
-      <p>O RobotName foi construído pensando em cada detalhe. O formato de seu corpo permite uma melhor estabilidade sobre a superfície, melhorando o controle e a dirigibilidade.</p>
+  </section>
+  <section class="progress-robot">
+    <div class="content">
+      <div class="carousel">
+        <div class="images">
+          <figure class="image">
+            <img src="img/robot-1.jpeg" alt="Imagem principal">
+          </figure>
+          <figure class="image">
+            <img src="img/robot-2.jpeg" alt="Imagem principal">
+          </figure>
+          <figure class="image">
+            <img src="img/robot-3.jpeg" alt="Imagem principal">
+          </figure>
+          <figure class="image">
+            <img src="img/robot-4.jpeg" alt="Imagem principal">
+          </figure>
+          <figure class="image">
+            <img src="img/robot-5.jpeg" alt="Imagem principal">
+          </figure>
+          <figure class="image">
+            <img src="img/robot-6.jpeg" alt="Imagem principal">
+          </figure>
+        </div>
+        <div class="another-images">
+          <button class="back"></button>
+          <ul>
+            <li>
+              <figure><img src="img/robot-1.jpeg" class="miniature" alt="Miniatura" data-index="0"></figure>
+            </li>
+            <li>
+              <figure><img src="img/robot-2.jpeg" class="miniature" alt="Miniatura" data-index="1"></figure>
+            </li>
+            <li>
+              <figure><img src="img/robot-3.jpeg" class="miniature" alt="Miniatura" data-index="2"></figure>
+            </li>
+            <li>
+              <figure><img src="img/robot-4.jpeg" class="miniature" alt="Miniatura" data-index="3"></figure>
+            </li>
+            <li>
+              <figure><img src="img/robot-5.jpeg" class="miniature" alt="Miniatura" data-index="4"></figure>
+            </li>
+            <li>
+              <figure><img src="img/robot-6.jpeg" class="miniature" alt="Miniatura" data-index="5"></figure>
+            </li>
+          </ul>
+          <button class="next"></button>
+        </div>
+      </div>
+      <div class="information-image">
+        <p>O RobotName foi construído pensando em cada detalhe. O formato de seu corpo permite uma melhor estabilidade
+          sobre a superfície, melhorando o controle e a dirigibilidade.</p>
+      </div>
     </div>
   </section>
   <section class="robocup" id="event">
-    <figure><img src="img/woman-robot.svg" alt="Mulher robótica"></figure>
-    <div class="information">
-      <h3>Robocup FIAP 2020</h3>
-      <p>A Robocup é a competição mais antiga da FIAP. Alunos dos 1°s anos de Sistemas de Informação constroem robôs para participar de duelos, onde o principal objetivo é estourar o balão que o adversário carrega. Para isso, todas as máquinas possuem armas em seu corpo.</p>
-      <span>Edições anteriores:</span>
-      <div class="previous-editions">
-        <a href="https://www.fiap.com.br/2017/10/23/robocup-3/" class="btn" target="_blank">2017</a>
-        <a href="https://www.fiap.com.br/2018/10/24/sap-robocup/" class="btn" target="_blank">2018</a>
-        <a href="https://www.fiap.com.br/2019/11/02/robocup-1si/" class="btn" target="_blank">2019</a>
+    <div class="content">
+      <figure><img src="img/woman-robot.svg" alt="Mulher robótica"></figure>
+      <div class="information">
+        <h3>Robocup FIAP 2020</h3>
+        <p>A Robocup é a competição mais antiga da FIAP. Alunos dos 1°s anos de Sistemas de Informação constroem robôs
+          para participar de duelos, onde o principal objetivo é estourar o balão que o adversário carrega. Para isso,
+          todas as máquinas possuem armas em seu corpo.</p>
+        <span>Edições anteriores:</span>
+        <div class="previous-editions">
+          <a href="https://www.fiap.com.br/2017/10/23/robocup-3/" class="btn" target="_blank">2017</a>
+          <a href="https://www.fiap.com.br/2018/10/24/sap-robocup/" class="btn" target="_blank">2018</a>
+          <a href="https://www.fiap.com.br/2019/11/02/robocup-1si/" class="btn" target="_blank">2019</a>
+        </div>
       </div>
     </div>
   </section>
   <section class="contact" id="contact">
-    <div class="form">
-      <h3>Fale conosco</h3>
-      <form action="#" method="post">
-        <input type="text" placeholder="Nome Completo">
-        <input type="email" placeholder="E-mail">
-        <textarea placeholder="Mensagem"></textarea>
-        <div class="radio-buttons">
-          <div class="radio">
-            <input type="radio" name="type-message" id="0" value="0">
-            <label for="0">Dúvida</label>
+    <div class="content">
+      <div class="form">
+        <h3>Fale conosco</h3>
+        <form id="contact-us">
+          <input type="text" name="name" placeholder="Nome Completo">
+          <input type="email" name="email" placeholder="E-mail">
+          <textarea name="message" placeholder="Mensagem"></textarea>
+          <div class="radio-buttons">
+            <label>
+              <input type="radio" name="type-message" value="0">
+              Dúvida
+            </label>
+            <label>
+              <input type="radio" name="type-message" value="1">
+              Sugestão
+            </label>
+            <label>
+              <input type="radio" name="type-message" value="2">
+              Congratulação
+            </label>
           </div>
-          <div class="radio">
-            <input type="radio" name="type-message" id="1" value="1">
-            <label for="1">Sugestão</label>
-          </div>
-          <div class="radio">
-            <input type="radio" name="type-message" id="2" value="2">
-            <label for="2">Congratulação</label>
-          </div>
-        </div>
-        <button type="submit" class="btn">Enviar</button>
-      </form>
-    </div>
-    <div class="information">
-      <p>Nos mande perguntas sobre o projeto, dicas para melhorá-lo ou elogios caso tenha gostado.</p>
-      <figure><img src="img/chat-robot.svg" alt="Robô"></figure>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+      <div class="information">
+        <p>Nos mande perguntas sobre o projeto, dicas para melhorá-lo ou elogios caso tenha gostado.</p>
+        <figure><img src="img/chat-robot.svg" alt="Robô"></figure>
+      </div>
     </div>
   </section>
+  <div class="errors-container"></div>
   <footer>
     <div class="informations">
       <div class="social-networks">
@@ -204,5 +290,7 @@
       <span class="credits">Desenvolvimento <span class="company">System Crown</span></span>
     </div>
   </footer>
+  <script src="js/index.js" type="module"></script>
 </body>
+
 </html>

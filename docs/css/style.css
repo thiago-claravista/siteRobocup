@@ -1,4 +1,6 @@
-@import 'default.css';
+@import "./default.css";
+@import "./message-box.css";
+
 a {
   text-decoration: none;
   color: inherit;
@@ -10,49 +12,62 @@ a {
   background: var(--primary-color);
   border: none;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,.2);
-  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   padding: 10px 0;
 }
-header div.header {
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  padding: 80px 60px;
+  margin: auto;
+  max-width: 1600px;
+}
+
+/* Header */
+header .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
   padding: 0 60px;
+  margin: auto;
+  max-width: 1600px;
   width: 100%;
   height: 70px;
 }
-header div.header div.logo a {
+header .header .logo a {
   display: flex;
   align-items: center;
 }
-header div.header div.logo img {
+header .header .logo img {
   pointer-events: none;
   margin-right: 5px;
   width: 40px;
   height: 40px;
 }
-header div.header div.logo span {
+header .header .logo span {
   font-size: 20px;
 }
-header div.header nav.nav-bar ul li {
+header .header nav.nav-bar ul li {
   display: inline-block;
   font-size: 16px;
   text-transform: uppercase;
   margin-left: 15px;
 }
-header label[for=menu-mobile].open-menu {
+header label[for="menu-mobile"].open-menu {
   position: absolute;
   display: none;
-  background: url('../img/hamburguer-button.svg') no-repeat center;
+  background: url("../img/hamburguer-button.svg") no-repeat center;
   cursor: pointer;
   top: 25px;
   right: 25px;
   width: 40px;
   height: 30px;
 }
-header label[for=menu-mobile].close-menu {
+header label[for="menu-mobile"].close-menu {
   display: none;
 }
 header input#menu-mobile:checked ~ .header {
@@ -61,244 +76,350 @@ header input#menu-mobile:checked ~ .header {
 header input#menu-mobile {
   display: none;
 }
-section.presentation {
+
+/* Presentation Section */
+.presentation {
   box-sizing: border-box;
   padding: 100px 0;
 }
-section.presentation div.container-presentation {
+.presentation .container-presentation {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap-reverse;
+  margin: auto;
+  max-width: 1600px;
 }
-section.presentation div.container-presentation div.text-presentation {
+.presentation .container-presentation .text-presentation {
   margin: 20px;
   max-width: 550px;
   flex: 1 1 100%;
 }
-section.presentation div.container-presentation div.text-presentation a.btn {
+.presentation .container-presentation .text-presentation a.btn {
   font-size: 22px;
   width: 200px;
 }
-section.presentation div.container-presentation div.text-presentation h2 {
+.presentation .container-presentation .text-presentation h2 {
   font-size: 42px;
   line-height: 50px;
   margin-bottom: 20px;
 }
-section.presentation div.container-presentation figure {
+.presentation .container-presentation figure {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section.presentation div.container-presentation img {
+.presentation .container-presentation img {
   pointer-events: none;
   animation: move-chip 1.5s ease alternate infinite;
   width: 350px;
   height: 350px;
 }
-section.presentation div.container-presentation i.shadow {
+.presentation .container-presentation i.shadow {
   display: block;
-  box-shadow: 0 35px 6px -10px rgba(0,0,0,.6);
+  box-shadow: 0 35px 6px -10px rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   animation: change-shadow 1.5s ease alternate infinite;
   margin-bottom: 20px;
   width: 70%;
   height: 40px;
 }
-section.team {
+
+/* Team Section */
+.team {
   background: var(--primary-color);
   padding: 80px 0;
 }
-section.team h3 {
+.team h3 {
   color: #fff;
   font-size: 42px;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 0 2px 5px rgba(0,0,0,.3);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   margin-bottom: 30px;
 }
-section.team div.members-group {
+.team .members-group {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: auto;
+  max-width: 1200px;
 }
-section.team div.members-group div.member {
+.team .members-group .member {
   display: flex;
   align-items: center;
   margin: 25px;
   width: 340px;
 }
-section.team div.members-group div.member img {
+.team .members-group .member img {
   background: #fff;
   border: 5px solid var(--secundary-color);
   border-radius: 50%;
   margin-right: 15px;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 }
-section.team div.members-group div.member div.information-member span.member-name {
+.team .members-group .member .information-member .member-name {
   font-size: 18px;
   font-family: var(--font);
   font-style: italic;
 }
-section.team div.members-group div.member div.information-member span.member-office {
+.team .members-group .member .information-member .member-office {
   display: block;
   color: #505050;
   font-size: 16px;
   font-family: var(--font);
   font-weight: 300;
 }
-section.characters {
+
+/* Characters Section */
+.characters {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
   background: #fff;
   padding: 40px 0;
 }
-section.characters div.resume-characters {
+.characters .resume-characters {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 100px;
 }
-section.characters div.resume-characters div.character {
-  margin: 0 50px;
-  width: 200px;
+.character {
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  transition: .5s;
+  padding: 0 20px 30px;
+  width: 240px;
 }
-section.characters div.resume-characters div.character img {
+.character * {
   pointer-events: none;
-  width: 200;
+}
+.character:hover {
+  background-color: rgba(0, 0, 0, 0.003);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.character:hover img {
+  transform: scale(0.85);
+}
+.character img {
+  transition: .3s;
+  pointer-events: none;
+  width: 200px;
   height: 200px;
 }
-section.characters div.resume-characters div.character span {
+.character span {
   display: block;
   text-align: center;
 }
-section.characters div.resume-characters div.character span.character-name {
+.character .character-name {
   font-size: 30px;
   text-transform: uppercase;
 }
-section.characters div.resume-characters div.character span.character-resume {
+.character .character-resume {
   color: #505050;
   font-size: 18px;
   font-weight: 400;
 }
-section.progress-robot {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  background: #fff;
-  padding: 80px 60px;
+.characters .read-more {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 0;
+  width: 150px;
 }
-section.progress-robot div.carousel {
+.about-robot {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.about-robot.active {
+  display: flex;
+}
+.about-robot-modal {
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  width: 500px;
+}
+.about-robot-modal .content-modal {
+  overflow: auto;
+  padding: 20px;
+  max-height: 80vh;
+}
+.about-robot.active .about-robot-modal {
+  animation: show-modal .6s;
+}
+.close-modal{
+  position: absolute;
+  background: url('../img/close-button.svg') no-repeat center var(--primary-color);
+  background-size: 50% 50%;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+}
+.about-robot-modal h2 {
+  color: #404040;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.about-robot-modal p {
+  color: #606060;
+  text-align: justify;
+  text-indent: 20px;
+  line-height: 22px;
+  margin: 7px 0;
+}
+
+/* Slider Section */
+.progress-robot {
+  background: #fff;
+}
+.progress-robot .content {
+  flex-wrap: wrap;
+}
+.progress-robot .carousel {
   max-width: 550px;
   flex: 1 1 50%;
 }
-section.progress-robot div.carousel img.large-image{
-  background-color: lightcyan;
+.progress-robot .carousel .images {
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: auto;
   margin-bottom: 10px;
-  width: 100%;
-  height: 325px;
 }
-section.progress-robot div.carousel div.another-images {
+.progress-robot .carousel .image {
+  scroll-snap-align: start;
+  pointer-events: none;
+  width: 100%;
+  height: 310px;
+  flex: none;
+}
+.progress-robot .carousel img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.progress-robot .carousel .another-images {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-section.progress-robot div.carousel div.another-images button {
+.progress-robot .carousel .another-images button {
   background: no-repeat center;
   border: none;
   cursor: pointer;
   width: 20px;
   height: 30px;
 }
-section.progress-robot div.carousel div.another-images button.back {
-  background-image: url('../img/arrow-left.svg');
+.progress-robot .carousel .another-images button.back {
+  background-image: url("../img/arrow-left.svg");
 }
-section.progress-robot div.carousel div.another-images button.next {
-  background-image: url('../img/arrow-right.svg');
+.progress-robot .carousel .another-images button.next {
+  background-image: url("../img/arrow-right.svg");
 }
-section.progress-robot div.carousel div.another-images ul {
+.progress-robot .carousel .another-images ul {
   margin: 0 20px;
 }
-section.progress-robot div.carousel div.another-images ul li {
+.progress-robot .carousel .another-images ul li {
   display: inline-block;
   cursor: pointer;
   margin: 0 5px;
 }
-section.progress-robot div.carousel div.another-images ul li img {
+.progress-robot .carousel .another-images ul li img {
   background-color: lightgrey;
   width: 50px;
   height: 50px;
 }
-section.progress-robot div.information-image {
+.progress-robot .information-image {
   margin: 40px;
+  max-width: 850px;
   flex: 1 1 40%;
 }
-section.progress-robot div.information-image p {
+.progress-robot .information-image p {
   color: #505050;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 400;
   text-align: center;
 }
-section.robocup {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap-reverse;
+
+/* Robocup Informations Section */
+.robocup {
   background: var(--tertiary-color);
-  padding: 80px 0;
 }
-section.robocup img {
+.robocup .content {
+  flex-wrap: wrap-reverse;
+}
+.robocup img {
   pointer-events: none;
   margin-top: 50px;
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
 }
-section.robocup div.information {
+.robocup .information {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-section.robocup div.information h3 {
+.robocup .information h3 {
   color: #505050;
   font-size: 30px;
   text-align: right;
   text-transform: uppercase;
 }
-section.robocup div.information p {
+.robocup .information p {
   color: #505050;
   font-size: 20px;
   font-weight: 300;
   font-style: italic;
   text-align: right;
   margin: 15px 0;
-  width: 500px;
+  width: 450px;
 }
-section.robocup div.information span {
+.robocup .information span {
   margin-bottom: 10px;
 }
-section.robocup div.information div.previous-editions a {
+.robocup .information .previous-editions a {
   margin-left: 20px;
   width: 100px;
   padding: 5px 0;
 }
-section.contact {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap-reverse;
+
+/* Contact Section */
+.contact {
   background: #fff;
-  padding: 80px 0;
 }
-section.contact div.form {
+.contact .content {
+  flex-wrap: wrap-reverse;
+}
+.contact .form {
   margin-top: 50px;
-  flex: 0 0 450px;
+  max-width: 450px;
+  flex: 1 1 auto;
 }
-section.contact div.form h3 {
+.contact .form h3 {
   color: #505050;
   font-size: 30px;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-section.contact div.form form > input, section.contact div.form form textarea {
+.contact .form form > input,
+.contact .form form textarea {
   display: block;
   color: #262626;
   font-family: var(--font);
@@ -307,34 +428,30 @@ section.contact div.form form > input, section.contact div.form form textarea {
   border: none;
   outline: none;
   border-radius: 5px;
-  box-shadow: 0 1px 5px rgba(0,0,0,.2);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   padding: 10px 15px;
   margin-bottom: 15px;
   width: 100%;
 }
-::placeholder  {
-  color: #969696;
-  font-style: italic;
-}
-section.contact div.form form textarea {
+.contact .form form textarea {
   resize: vertical;
   min-height: 150px;
   max-height: 300px;
 }
-section.contact div.form form div.radio-buttons {
-  display: flex;
-}
-section.contact div.form form div.radio-buttons div.radio {
+.contact .form form .radio-buttons {
   display: flex;
   align-items: center;
-  margin-right: 15px;
+  gap: 15px;
 }
-section.contact div.form form div.radio-buttons div.radio label {
+.contact .form form .radio-buttons label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: #505050;
-  margin-left: 5px;
+  line-height: 0;
 }
-section.contact div.form form button {
+.contact .form form button {
   font-family: var(--font);
   font-weight: 600;
   font-size: 18px;
@@ -343,38 +460,38 @@ section.contact div.form form button {
   margin-top: 15px;
   width: 150px;
 }
-section.contact div.information {
+.contact .information {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex: 0 0 350px;
 }
-section.contact div.information p {
+.contact .information p {
   color: #505050;
   font-size: 24px;
   text-align: center;
   margin-bottom: 25px;
 }
-section.contact div.information img {
+.contact .information img {
   pointer-events: none;
   width: 250px;
   height: 250px;
 }
+
+/* Footer */
 footer {
   background: #fff;
   padding: 10px 0;
 }
-footer div.informations {
+footer .informations {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 40px;
   margin-bottom: 20px;
 }
-footer div.informations > div {
-  margin: 0 20px;
-}
-footer div.informations span.title {
+footer .informations .title {
   display: block;
   font-size: 20px;
   letter-spacing: 2px;
@@ -382,40 +499,42 @@ footer div.informations span.title {
   text-align: center;
   margin-bottom: 10px;
 }
-footer div.informations div.social-networks div.links {
+footer .informations .social-networks .links {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer div.informations div.social-networks div.links a {
+footer .informations .social-networks .links a {
   margin: 0 15px;
 }
-footer div.informations div.social-networks div.links a img {
+footer .informations .social-networks .links a img {
   pointer-events: none;
   width: 35px;
   height: 35px;
 }
-footer div.informations div.organization {
+footer .informations .organization {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-footer div.informations div.organization img {
+footer .informations .organization img {
   height: 35px;
 }
-footer div.copyright > span {
+footer .copyright > span {
   display: block;
   font-size: 14px;
   text-align: center;
 }
-footer div.copyright span.credits {
+footer .copyright .credits {
   color: #808080;
   font-weight: 400;
   font-size: 12px;
 }
-footer div.copyright span.credits span.company {
-  color: rgb(237,20,91)
+footer .copyright .credits .company {
+  color: rgb(237, 20, 91);
 }
+
+/* Animations */
 @keyframes move-chip {
   from {
     transform: translateY(0);
@@ -424,11 +543,23 @@ footer div.copyright span.credits span.company {
     transform: translateY(-15px);
   }
 }
+
 @keyframes change-shadow {
   from {
-    transform: scale(1)
+    transform: scale(1);
   }
   to {
-    transform: scale(.9)
+    transform: scale(0.9);
+  }
+}
+
+@keyframes show-modal {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
   }
 }

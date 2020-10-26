@@ -1,0 +1,53 @@
+.message-item {
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0,0,0,.3);
+  pointer-events: initial;
+  animation: show-pop-up .5s forwards;
+  padding: 10px 20px;
+  margin: 5px 0;
+  width: fit-content;
+  min-width: 250px;
+}
+.message-item.hide {
+  animation: hide-pop-up .6s forwards;
+}
+.error-message {
+  background: #ff0000;
+}
+.success-message {
+  background: #00c000;
+}
+
+.errors-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: transparent;
+  pointer-events: none;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes show-pop-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes hide-pop-up {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
